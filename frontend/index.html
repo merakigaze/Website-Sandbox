@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Open House Auth Test</title>
+    <style>
+        body { font-family: sans-serif; margin: 50px; background: #f4f7f6; display: flex; gap: 40px; }
+        .box { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #28a745; color: white; border: none; padding: 10px 15px; width: 100%; border-radius: 4px; cursor: pointer; }
+        .signin-btn { background: #007bff; }
+        pre { color: red; font-weight: bold; margin-top: 10px; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Create Account</h2>
+        <input type="text" id="reg-user" placeholder="Username">
+        <input type="password" id="reg-pass" placeholder="Password">
+        <button onclick="handleAuth('/register')">Sign Up</button>
+        <pre id="reg-msg"></pre>
+    </div>
+
+    <div class="box">
+        <h2>Welcome Back</h2>
+        <input type="text" id="login-user" placeholder="Username">
+        <input type="password" id="login-pass" placeholder="Password">
+        <button class="signin-btn" onclick="handleAuth('/login')">Sign In</button>
+        <pre id="login-msg"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
