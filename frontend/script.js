@@ -1,4 +1,4 @@
-const BACKEND_URL = 'https://website-sandbox-1nba.onrender.com/';
+const BACKEND_URL = 'https://website-sandbox-1nba.onrender.com/api';
 
 function handleAuth(endpoint) {
     const isReg = endpoint === '/register';
@@ -9,7 +9,7 @@ function handleAuth(endpoint) {
     msgBox.style.color = "blue";
     msgBox.innerText = "Processing...";
 
-    fetch(`${BACKEND_URL}${endpoint}`, {
+    fetch(`${BACKEND_URL}${endpoint}`, {    
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username: user, password: pass })
