@@ -1,4 +1,4 @@
-const BACKEND_URL = 'http://localhost:8080/api';
+const BACKEND_URL = 'https://website-sandbox-1nba.onrender.com/';
 
 function handleAuth(endpoint) {
     const isReg = endpoint === '/register';
